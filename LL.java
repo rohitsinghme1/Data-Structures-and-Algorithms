@@ -1,3 +1,6 @@
+//Implementation of LinkList in JAVA
+//By - Rohit Singh
+
 class LL {
 
     Node head;
@@ -28,7 +31,7 @@ class LL {
         head = newnode;
     }
 
-    // Adding element ata last of the link list.
+    // Adding element at last of the link list.
 
     public void addlast(int data) {
         Node newnode = new Node(data);
