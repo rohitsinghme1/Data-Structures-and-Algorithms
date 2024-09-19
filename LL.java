@@ -1,4 +1,4 @@
-//Implementation of LinkList in JAVA
+//Implementation of LinkList in JAVA using Head And Tail 
 //By - Rohit Singh
 
 class LL {
