@@ -12,6 +12,7 @@ class LinkedList {
         }
     }
 
+    // Adding Node in the Start of the linked list(adding head).
     public void AddFirst(int data) {
         Node newnode = new Node(data);
         if (head == null) {
@@ -22,6 +23,7 @@ class LinkedList {
         head = newnode;
     }
 
+    // Adding element at the last of the linkedlist.
     public void AddLast(int data) {
         Node newnode = new Node(data);
         if (head == null) {
@@ -35,6 +37,7 @@ class LinkedList {
         current.next = newnode;
     }
 
+    // removing node form the first(removing head).
     public void removefirst() {
         if (head == null) {
             System.out.println("List is Empty");
@@ -46,6 +49,7 @@ class LinkedList {
         head = head.next;
     }
 
+    // removing the last node.
     public void removelast() {
         if (head == null) {
             System.out.println("List is Empty");
@@ -54,7 +58,6 @@ class LinkedList {
             head = null;
             return;
         }
-
         Node secondlast = head;
         Node lastnode = head.next;
         while (lastnode.next != null) {
@@ -64,6 +67,7 @@ class LinkedList {
         secondlast.next = null;
     }
 
+    // traversing amd printing the linkedlist.
     public void print() {
         if (head == null) {
             System.out.println("list is Empty");
@@ -78,6 +82,7 @@ class LinkedList {
 
     }
 
+    // main class
     public static void main(String agrs[]) {
         LinkedList list = new LinkedList();
         list.AddFirst(5);
