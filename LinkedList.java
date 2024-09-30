@@ -37,6 +37,35 @@ class LinkedList {
         current.next = newnode;
     }
 
+    // Inserting a node at a specific position.
+    public void insertAtPosition(int data, int position) {
+        Node newnode = new Node(data);
+
+        // Inserting at the head (position 0)
+        if (position == 0) {
+            AddFirst(data);
+            return;
+        }
+
+        Node current = head;
+        // Traverse to the position just before where we want to insert
+        for (int i = 0; i < position - 1; i++) {
+            if (current == null) {
+                System.out.println("Position out of bounds");
+                return;
+            }
+            current = current.next;
+        }
+
+        // If current is not null, insert the new node
+        if (current != null) {
+            newnode.next = current.next;
+            current.next = newnode;
+        } else {
+            System.out.println("Position out of bounds");
+        }
+    }
+
     // removing node form the first(removing head).
     public void removefirst() {
         if (head == null) {
@@ -93,6 +122,8 @@ class LinkedList {
         list.removelast();
         list.print();
         list.removefirst();
+        list.print();
+        list.insertAtPosition(5, 1);
         list.print();
     }
 }
