@@ -42,7 +42,8 @@ class stack2 {
             System.out.println("Stack is Empty");
             return;
         }
-        int pos = arr[top--];
+
+        top--;
     }
 
     public void peek() {
